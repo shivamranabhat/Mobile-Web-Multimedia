@@ -1,4 +1,4 @@
 1. 404 Error Page
-![alt text](https://github.com/[shivam22-ab]/[Mobile-Web-Multimedia]/blob/[main]/404Error.png?raw=true)
+![404 Error Image](Assignment/Assignment-2/to/404Error.png?raw=true "Title")
 2. CTA Page
 3. Hero Page
