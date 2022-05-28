@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.body{
+    overflow-x: hidden;
+}
+
+.cta-content{
+    width:600px; 
+    margin: auto;
+    font-family: 'Roboto Flex', sans-serif;
+}
+.cta-content h1{
+    font-size: 45px;
+}
+.cta-content a{
+    text-decoration: none;
+}
+.cta-content .btn{
+    padding: 13px 30px;
+    border-radius: 10px;           
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cta-content .primary{
+    color: #fff;
+    border: none;
+    background-color: rgb(63, 46, 245);
+    margin-left: 70px;
+
+}
+.cta-content .primary:hover{
+    background-color: rgb(117, 105, 247);
+}
+.cta-content .secondary{
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(207, 207, 207);
+    margin-left: 40px;
+    
+}
+.cta-content .secondary:hover{
+    background-color:rgb(192, 192, 192);
+}
+.cta-content h1 span{
+    display: block;
+    text-align: center;
+}

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto Flex', sans-serif;
+}
+html,body{
+    overflow-x: hidden;
+}
+/*Navigation design starts*/
+#navbar{
+    position: relative;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+.navigation-links{
+    display: flex;
+    padding: 8px 10px;
+}
+.logo svg{
+    width: 50px;
+    margin-left:20px;
+}
+#workflow{
+    font-size: 25px;
+    font-weight: 600;
+    margin: 8px 0 0 10px;
+}
+.navigation-links ul{
+    list-style-type: none;
+    flex:5;
+    padding: 15px 20px;
+}
+.navigation-links li{
+    display: inline;
+    padding-left:15px;
+}
+.navigation-links li a{
+    text-decoration: none;
+    padding: 25px 10px;
+    color: rgb(141, 141, 141);
+    font-weight: 600;
+}
+#menu{
+    display: none;
+}
+.navigation-links li a:hover{
+    color: #000;
+    border-bottom: 2px solid rgb(24, 82, 255);
+}
+.navigation-links li a.active{
+    color: #000;
+    border-bottom: 2px solid rgb(24, 82, 255);
+}
+.right-content{
+    display: flex;
+    flex:2; 
+}
+.right-content .svg-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.right-content #search-btn{
+    padding: 8px 50px;
+    border: 1px solid rgb(202, 202, 202);
+    border-radius: 5px;
+    
+}
+#magnifying-glass{
+    position: absolute;
+    left:10px;
+    width: 7%;
+}
+ ::placeholder{
+    color: rgb(143, 143, 143);
+    font-size: 15px;
+}
+.right-content svg{
+    fill: #fff;
+    color: rgb(184, 184, 184);
+    cursor: pointer;
+}
+ #bell-icon{
+    width: 25px;
+    margin-left: 30px;
+}
+#bell-icon :hover{
+    color: #000;
+}
+.profile-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profile-image img{
+    width: 40px;
+    border-radius: 50px;
+    margin:5px 10px 5px 50px;
+    cursor: pointer;
+}
+/*Navigation design ends*/
+/*Body design starts*/
+#body-content{
+    background-color: rgb(232, 231, 231);
+    height: 100vh;
+}
+/*Body design ends*/
+/*Responsive design starts*/
+@media (max-width:1200px){
+    #menu{
+        display: inline;
+        color: #000;
+    }
+    .navigation-links li .nav-menu, .active{
+        display: none;
+    } 
+}
+@media (max-width:900px){
+    #search-btn{
+        display: none;
+    }
+}
+@media (max-width:600px){
+    #bell-icon{
+        display: none;
+    }
+    #workflow{
+        font-size: 20px;
+        margin-top: 12px;
+    }
+}
+@media (max-width:480px){
+    
+}
+/*Responsive design ends*/

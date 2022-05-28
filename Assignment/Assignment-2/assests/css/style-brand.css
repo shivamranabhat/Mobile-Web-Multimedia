@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Nunito:wght@700&family=Roboto+Flex&family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Flex', sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+.nav-links{
+    display: flex;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+}
+.logo{
+    font-size: 30px;
+    font-weight: 600;
+    padding: 10px 20px;
+    margin-top: 5px;
+    flex: 2;
+    cursor: pointer;
+}
+.logo:hover{
+    color: rgb(185, 185, 185);
+}
+.nav-links ul{
+    list-style-type: none;
+    flex: 6;
+    margin-top: 20px;
+}
+.nav-links li{
+    display: inline;
+}
+.nav-links li a{
+    text-decoration: none;
+    padding:20px 30px;
+    color: #000;
+    font-family: 'Roboto', sans-serif;
+}
+.nav-links a:hover{
+    color: rgb(254, 130, 41);
+}
+.nav-links a.active{
+    border-bottom: 3px solid #000;
+}
+.button{
+    display: flex;
+    justify-content: flex-end;
+    flex:2;   
+    padding: 10px;
+}
+.button a button{
+    padding:10px 20px;
+    border: 1px solid rgb(194, 194, 194);
+    margin-top: 5px;
+    margin-right: 40px;
+    background-color: #fff;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button a button:hover{
+    background-color: rgb(241, 237, 237);
+}
+.content{
+    display: flex;
+}
+.left-content{
+    padding: 130px 30px 0 30px;
+}
+.left-content h1{
+    font-size: 65px;
+    font-family: 'Roboto', sans-serif;
+}
+.left-content{
+    flex: 4;
+}
+.right-content{
+    flex: 5;
+}
+.paragraph-content {
+    padding-top: 30px;
+}
+.paragraph-content ,.one, .two, .three{
+    display: flex;
+}
+.paragraph-content p{
+    margin-left:20px;
+    font-size: 20px;
+}
+.paragraph-content svg{
+    width:4%;
+    color:rgb(74, 114, 255);
+    fill: #fff;
+}
+.right-content{
+    padding: 100px 40px 0 40px;
+}
+.right-content img{
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    height: auto;
+}
+.search-bar{
+    padding: 40px 10px;
+}
+.search-bar #textfield{
+    width: 60%;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid rgb(181, 181, 181);
+}
+::placeholder{
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(176, 176, 176);
+}
+#search-btn{
+    color: #fff;
+    background-color: rgb(55, 119, 249);
+    border: none;
+    padding:12px 15px;
+    border-radius: 7px;
+    margin-left:-85px ;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+}
+#search-btn:hover{
+    background-color: rgb(0, 13, 255);
+}
+/*Responsive design starts*/
+@media (max-width:1100px){
+    .content{
+        flex-direction: column;
+    }
+    #faq{
+        display: none;
+    }
+    .right-content{
+        display: flex;
+        justify-content: center;
+    }
+    .right-content img{
+        margin-top: -100px;
+    }
+    .search-bar{
+        display: flex;
+        justify-content: center;
+    }
+}
+@media (max-width:900px){
+    .nav-links ul{
+        position: fixed;
+        width: 100%;
+        height: auto;
+        background-color: rgb(48, 48, 48);
+        top:60px;
+        left:0%;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+    .nav-links ul li{
+        display: block;
+        margin-top: 50px;
+        padding: 5px;
+        line-height: 30px;
+    }
+    .nav-links ul li a{
+        font-size: 25px;
+        color: #fff;
+    }
+    #faq{
+        display: inline;
+        margin-top: -25px;
+    }
+    .nav-links ul li a.active, a:hover{
+        border-bottom: 2px solid #fff;
+    }
+}
