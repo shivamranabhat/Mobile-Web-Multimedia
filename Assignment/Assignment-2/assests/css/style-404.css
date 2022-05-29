@@ -4,19 +4,25 @@
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
+body{
+    overflow-x: hidden;
+}
 #section-404{
     display: flex;
-    padding: 150px 0;
-    
+    width:80%;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    height:500px;
 }
 .left-content{
     flex:4;
-    padding:150px 0;
 }
 .right-content{
     flex:6;
-    padding:150px 0;
     margin-right: 80px;
 }
 h1{
