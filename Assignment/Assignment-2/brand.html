@@ -12,14 +12,22 @@
     <section id="navbar">
         <nav class="nav-links">
             <div class="logo">Brand</div>
-            <ul>             
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="#">Components</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">Contact</a></li>
-                <li><a href="#" id="faq">FAQ</a></li>
+            <ul>    
+                <li class="dropdown"><a href="#" id="menu">Menu&nbsp;&nbsp;<i class="fa-solid fa-caret-down"></i></a>
+                    <div class="dropdown-item">
+                        <a href="#">Components</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Contact</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </li>    
+                <li><a href="#" class="nav-items active">Home</a></li>
+                <li><a href="#" class="nav-items">Components</a></li>
+                <li><a href="#" class="nav-items">Pricing</a></li>
+                <li><a href="#" class="nav-items">Contact</a></li>
+                <li><a href="#" class="nav-items" id="faq">FAQ</a></li>
             </ul>
-            <div class="button">
+            <div class="contact-button">
                 <a href="#">
                     <button>Contact Us</button>
                 </a>

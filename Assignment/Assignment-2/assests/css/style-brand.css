@@ -27,7 +27,7 @@ body{
 .nav-links ul{
     list-style-type: none;
     flex: 6;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 .nav-links li{
     display: inline;
@@ -38,20 +38,27 @@ body{
     color: #000;
     font-family: 'Roboto', sans-serif;
 }
-.nav-links a:hover{
+.nav-links a:hover, .dropdown:hover .dropdown-btn{
     color: rgb(254, 130, 41);
 }
 .nav-links a.active{
     border-bottom: 3px solid #000;
 }
-.button{
+#menu{
+    display: none;
+}
+.dropdown-item{
+    display: none;
+}
+.contact-button{
     display: flex;
     justify-content: flex-end;
     flex:2;   
     padding: 10px;
 }
-.button a button{
-    padding:10px 20px;
+.contact-button a button{
+    padding:10px 0;
+    width:100%;
     border: 1px solid rgb(194, 194, 194);
     margin-top: 5px;
     margin-right: 40px;
@@ -60,7 +67,7 @@ body{
     border-radius: 5px;
     cursor: pointer;
 }
-.button a button:hover{
+.contact-button a button:hover{
     background-color: rgb(241, 237, 237);
 }
 .content{
@@ -99,9 +106,7 @@ body{
 }
 .right-content img{
     width: 100%;
-    max-width: 800px;
     border-radius: 15px;
-    height: auto;
 }
 .search-bar{
     padding: 40px 10px;
@@ -121,10 +126,10 @@ body{
     color: #fff;
     background-color: rgb(55, 119, 249);
     border: none;
-    padding:12px 15px;
+    padding:12px 17px;
     border-radius: 7px;
-    margin-left:-85px ;
-    cursor: pointer;
+    margin-left:-90px ;
+    cursor: pointer;     
     font-size: 14px;
     font-weight: 600;
 }
@@ -132,16 +137,12 @@ body{
     background-color: rgb(0, 13, 255);
 }
 /*Responsive design starts*/
-@media (max-width:1100px){
+@media (max-width:1200px){
     .content{
         flex-direction: column;
     }
     #faq{
         display: none;
-    }
-    .right-content{
-        display: flex;
-        justify-content: center;
     }
     .right-content img{
         margin-top: -100px;
@@ -152,31 +153,37 @@ body{
     }
 }
 @media (max-width:900px){
-    .nav-links ul{
-        position: fixed;
-        width: 100%;
-        height: auto;
-        background-color: rgb(48, 48, 48);
-        top:60px;
-        left:0%;
-        text-align: center;
-        padding-bottom: 30px;
+   #menu{
+       display: inline;
+   }
+   .dropdown{
+       position: relative;
+   }
+   .dropdown-item{
+       position: absolute;
+       top:40px;
+       min-width: 200px;
+       background-color: #fff;
+       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+   }
+   .dropdown-item a{
+       display: block;
+   }
+    .dropdown:hover .dropdown-item {
+      display: block;
     }
-    .nav-links ul li{
-        display: block;
-        margin-top: 50px;
-        padding: 5px;
-        line-height: 30px;
-    }
-    .nav-links ul li a{
-        font-size: 25px;
-        color: #fff;
-    }
-    #faq{
-        display: inline;
-        margin-top: -25px;
-    }
-    .nav-links ul li a.active, a:hover{
-        border-bottom: 2px solid #fff;
-    }
+   .nav-items{
+       display: none;
+   }
+   .logo{
+       flex: 1;
+   }
+   .nav-links ul{
+       flex: 2;
+   }
 }
+@media (max-width:400px){
+    .contact-button{
+        display: none;
+    }
+ }
