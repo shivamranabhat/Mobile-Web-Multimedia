@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let employee =[
+            {
+                name:"Anil",
+                position:"HR",
+                Country:"NP",
+                City:"Butwal",
+                getAddress:function(){
+                    return this.Country +","+this.City
+                }
+            }
+            ,
+            {
+                name:"Rita",
+                position:"Accountant",
+                Country:"India",
+                City:"Banglore",
+                getAddress:function(){
+                    return this.Country +","+this.City
+                }
+            },
+            {
+                name:"Hari",
+                position:"Helper",
+                Country:"USA",
+                City:"LA",
+                getAddress:function(){
+                    return this.Country +","+this.City
+                }
+            }
+        ]
+        // const emp1 ={name:"Anil",position:"HR"}
+        // const emp2 ={name:"Hari",position:"Accountant"}
+        // const emp3 ={name:"Rita",position:"Helper"}
+    </script>
+</body>
+</html>

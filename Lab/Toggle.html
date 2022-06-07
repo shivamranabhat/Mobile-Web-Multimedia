@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+</head>
+<body>
+    <button id="showbtn">Show</button>
+    <button id="hidebtn">Hide</button>
+    <button id="btn">Button</button>
+    <p></p>
+    <script>
+        // const el = document.querySelector("#btn");
+        // el.addEventListener("click", function(){
+        //     const p = document.querySelector("p");
+        //     if(p.style.visibility == "hidden"){
+        //         p.style.visibility = "revert";
+        //     }
+        //     else{
+        //         p.style.visibility = "hidden";
+        //     }
+        // });
+        //for display and hide on click event
+        const show = document.querySelector("#showbtn");
+            show.addEventListener("click", function (){
+                const para = document.querySelector("p");
+                if(para.style.visibility == "hidden"){
+                    para.style.visibility = "revert";
+                }
+                para.innerHTML = Date();
+            });
+            const hide = document.querySelector("#hidebtn");
+            hide.addEventListener("click", function (){
+                const para = document.querySelector("p");
+                if(para.innerHTML= Date()){
+                    para.style.visibility ="hidden";
+                }
+                
+            });
+            //for click, mouseover and mouseout event
+            const event1 = document.querySelector("#btn")
+            event1.addEventListener("click", mouseclicked);
+             function mouseclicked(){
+                const para = document.querySelector("p");
+                para.innerHTML += "Mouse clicked <br>";
+
+            }
+            event1.addEventListener("mouseover", over)
+            function over(){
+                const para = document.querySelector("p");
+                para.innerHTML += "Mouse over <br>";
+            }
+            event1.addEventListener("mouseout", out )
+            function out(){
+                const para = document.querySelector("p");
+                para.innerHTML += "Mouse out <br>";
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+</head>
+
+<body style="background: rgb(0, 145, 255);color:rgb(255, 255, 255);text-align: center;font-size: 30px;font-family:cursive">
+  <h1>Marksheet</h1>
+
+  <script>
+    let sub = [];
+    let marks = [];
+    let total = 0;
+    // Take input from users
+    for (let i = 0; i < 5; i++) {
+      sub[i] =prompt("Enter your subject");
+      marks[i] =prompt("Enter your marks");
+    }
+    for (let x = 0; x < 5; x++) {
+      let data = sub[x] + ":" + marks[x]+"<br>";
+      document.write(data);
+    }
+    // Calculate total marks
+    for (let w = 0; w < marks.length; w++) {
+      total += +marks[w];
+    }
+    document.write("The total marks is:" + total);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <p onclick="alert('This page says hello')">Hello</p>
+    <h1>Click Me!!</h1>
+    <h1>Click Me 2!!</h1>
+    <h1 id="h3">Click Me 3!!</h1>
+    <script>
+        const el = document.querySelector('#h3');
+        el.addEventListener("click", function() {
+            alert("Clicking");
+        });
+        // const h1 = document.querySelectorAll('#h3');
+        // // h1[0].style.color = "green";
+        // // console.log(h1);
+        // // const h2 = document.querySelectorAll('#h1');
+        // //h2.forEach(function(e))
+        // // console.log(e);
+        // const byId = document.getElementById('h1');
+        // const bytag = document.getElementsByTagName('h1');
+        // for(let i =0; i< bytag.length; i++){
+        //        bytag[i].style.color = "red";
+        //        bytag[i].style.backgroundColor = "blue";
+        //     //    bytag[i].style.display = "none";
+        // }
+        // const byclass = document.getElementsByClassName('h1');
+        // const el = document.querySelector('h1');
+        // el.style.color = "red";
+        // console.log(typeof el);
+
+    </script>
+</body>
+</html>
