@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 16</title>
+</head>
+<body>
+    <p>Learning javascript</p>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button>
+    <button id="toggle">Toggle</button>
+    <input type="text" name="username">
+    <p>Your name is <span id="display"></span></p>
+    <script type="text/javascript" src="./assests/jquery 3.6.js/jquery3.6.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("p").click(function (el, event){
+                alert("Hi");
+                console.log(event.target);
+            });
+            $("#show").click(function (){
+                $("p").show(300);
+            });
+            $("#hide").click(function (){
+                $("p").hide(300);
+            });
+            $("#toggle").click(function (){
+                $("p").toggle(300);
+            });
+            $("input[name=username]").keyup(function (event){
+                $("display").text(event.target.value);
+            });
+        });
+    </script>
+</body>
+</html>

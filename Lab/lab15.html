@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result Details</h1>
+    <script>
+        let marks= [10,60,80,90];
+        let passmarks = 0;
+        // 1st way shorter and a bit difficult to understand
+        let isPassed=  marks => passmarks = marks.filter(filtermarks => marks <= 40);
+        ((passmarks.length == marks.length) ? true:false);
+        //2nd way easier to understand but longer in code
+        // function isPassed(marks){
+        //     let passmarks = marks.filter(filteredmarks);
+        //     return passmarks;
+        // }
+        // function filteredmarks(marks){
+        //     return (marks <= 40 ? true:false);    
+        // }
+        isPassed(marks);
+        function getTotal(marks){
+            return marks.reduce(function(marks1,marks2){
+                return marks1+marks2;
+            },0);
+        }
+        getTotal(marks);
+        // types of functions
+      //Types of function:
+	//no return without parameter
+	function sum()
+	{
+		console.log(2+5);
+	}
+	sum();
+	sum();
+
+	//no return with parameter
+	function minus(num1, num2)
+	{
+		console.log((num1 > num2) ? num1 - num2 : num2 - num1);
+	}
+
+	minus(5, 2);
+	minus(5, 15);
+
+	let test = minus(10, 4);
+	console.log(test);
+
+	// return without parameter
+	function isEligibleAgeWithoutParam()
+	{
+		let age = 18;
+		return age >= 16 ? true: false;
+	}
+	
+	function isEligibleAge(age)
+	{
+		return age >= 16 ? true: false;
+
+	}
+
+	if (isEligibleAge(20)) {
+		console.log("Eligible to vote");
+	} else {
+		console.log("Not Eligible to vote");
+	}
+
+	if (isEligibleAge(12)) {
+		console.log("Eligible to issue passport");
+	} else {
+		console.log("Not Eligible to issue passport");
+	}
+    </script>
+</body>
+</html>

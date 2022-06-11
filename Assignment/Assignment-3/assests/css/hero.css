@@ -1,25 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Freckle+Face&family=Nunito:wght@700&family=Roboto+Flex&family=Roboto:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Flex', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
 }
 body{
     overflow-x: hidden;
 }
-
+.mobile-nav-items {
+  display: flex;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
+  padding: 10px 0;
+}
+.mobile-logo {
+  flex: 20%;
+}
+#logo-text {
+  font-size: 30px;
+  font-weight: 600;
+  margin-left: 20px;
+}
+.mobile-navigation{
+    display: none;
+}
+.navigation-buttons {
+  flex: 20%;
+  display: flex;
+  justify-content: flex-end;
+}
+#bar-btn, #cross-btn {
+  padding: 0 13px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+#cross-btn{
+    display: none;
+}
+.mobile-links {
+  display: block;
+  background: rgb(0, 0, 0);
+  margin-top: 5px;
+}
+.mobile-links ul{
+    list-style-type: none;
+}
+.mobile-links ul li{
+    text-align: center;
+    padding: 25px 0 20px 0;
+}
+.mobile-links li a{
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+.mobile-links li a.active, .mobile-links li a:hover{
+    border-bottom: 3px solid rgb(148, 148, 148);
+}
+/* Mobile navigation design starts */
+/* Large screen design starts */
 .nav-links{
     display: flex;
     box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
 }
 .logo{
+    flex:5%;
     font-size: 30px;
     font-weight: 600;
     padding: 10px 20px;
     margin-top: 5px;
-    flex: 2;
     cursor: pointer;
 }
 .logo:hover{
@@ -27,41 +82,34 @@ body{
 }
 .nav-links ul{
     list-style-type: none;
-    flex: 6;
-    margin-top: 24px;
 }
 .nav-links li{
-    display: inline;
+    display: inline-block;
+    padding: 25px 15px;
 }
 .nav-links li a{
     text-decoration: none;
-    padding:20px 30px;
     color: #000;
+    padding: 25px 10px;
+    font-weight: 550;
 }
-.nav-links a:hover, .dropdown:hover .dropdown-btn{
-    color: rgb(254, 130, 41);
-}
-.nav-links a.active{
+.nav-links li a.active, .nav-links li a:hover {
     border-bottom: 3px solid #000;
 }
-#menu{
-    display: none;
-}
-.dropdown-item{
-    display: none;
-}
 .contact-button{
+    padding: 10px 0;
+    flex:10%;
+}
+.contact-button a{
     display: flex;
     justify-content: flex-end;
-    flex:2;   
-    padding: 10px;
+    text-decoration: none;
 }
 .contact-button a button{
-    padding:10px 0;
-    width:100%;
+    padding:10px;
     border: 1px solid rgb(194, 194, 194);
     margin-top: 5px;
-    margin-right: 40px;
+    margin-right: 15px;
     background-color: #fff;
     font-family: 'Roboto', sans-serif;
     border-radius: 5px;
@@ -136,13 +184,11 @@ body{
 #search-btn:hover{
     background-color: rgb(0, 13, 255);
 }
-/*Responsive design starts*/
+/* Large screen design ends */
+/* Responsive design starts */
 @media (max-width:1200px){
     .content{
         flex-direction: column;
-    }
-    #faq{
-        display: none;
     }
     .right-content img{
         margin-top: -100px;
@@ -153,37 +199,36 @@ body{
     }
 }
 @media (max-width:900px){
-   #menu{
-       display: inline;
-   }
-   .dropdown{
-       position: relative;
-   }
-   .dropdown-item{
-       position: absolute;
-       top:40px;
-       min-width: 200px;
-       background-color: #fff;
-       box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16);
-   }
-   .dropdown-item a{
-       display: block;
-   }
-    .dropdown:hover .dropdown-item {
-      display: block;
-    }
-   .nav-items{
-       display: none;
-   }
    .logo{
-       flex: 1;
+       flex: 10%;
    }
-   .nav-links ul{
-       flex: 2;
+   .nav-links ul li{
+       padding: 25px 10px;
    }
 }
-@media (max-width:400px){
-    .contact-button{
+@media (max-width: 767px) {
+    .mobile-navigation{
+        display: block;
+    }
+    .mobile-links ul{
         display: none;
     }
- }
+    .nav-links{
+        display: none;
+    }
+    .left-content h1{
+        font-size: 60px;
+    }
+    .search-bar #textfield{
+        width: 80%;
+    }
+  }
+  @media (max-width:480px){
+    .left-content h1{
+        font-size: 50px;
+    }
+    .search-bar #textfield{
+        width: 90%;
+    }
+  }
+/* Responsive design ends */

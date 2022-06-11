@@ -11,6 +11,7 @@
     <button id="hidebtn">Hide</button>
     <button id="btn">Button</button>
     <p></p>
+    <script src="index.jsx"></script>
     <script>
         // const el = document.querySelector("#btn");
         // el.addEventListener("click", function(){
@@ -23,14 +24,15 @@
         //     }
         // });
         //for display and hide on click event
-        const show = document.querySelector("#showbtn");
-            show.addEventListener("click", function (){
-                const para = document.querySelector("p");
-                if(para.style.visibility == "hidden"){
-                    para.style.visibility = "revert";
-                }
-                para.innerHTML = Date();
-            });
+
+        // const show = document.querySelector("#showbtn");
+        //     show.addEventListener("click", function (){
+        //         const para = document.querySelector("p");
+        //         if(para.style.visibility == "hidden"){
+        //             para.style.visibility = "revert";
+        //         }
+        //         para.innerHTML = Date();
+        //     });
             const hide = document.querySelector("#hidebtn");
             hide.addEventListener("click", function (){
                 const para = document.querySelector("p");

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdow</title>
+</head>
+<body>
+    <select id="select">
+        <option value="Nep">Nepal</option>
+        <option value="US" >USA</option>
+        <option value="Ch" >China</option>
+        <option value="Ind">India</option>
+        <option value="Mal">Maldives</option>
+    </select>
+    <p>Your country <span id="country"></span> <span id="code"></span></p>
+    <script src="./assests/jquery 3.6.js/jquery3.6.js"></script>
+    <script>
+        $(document).ready(function (){
+            $("#select").change(function (event){
+                $("#country").text(event.target.value);          
+            })
+        })
+    </script>
+</body>
+</html>

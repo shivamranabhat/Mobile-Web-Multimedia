@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=
+    , initial-scale=1.0"
+    />
+    <title>Search</title>
+    <style>
+      #message {
+        color: red;
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="login-form" action="https://www.google.com">
+      <input type="text" name="search" id="search" placeholder="search" />
+      <p id="message"></p>
+      <input type="submit" id="submit">
+    </form>
+    <script> 
+      const search = document.querySelector("#search");
+      const message = document.querySelector("#message");
+      search.addEventListener("keyup", function keyup(event) {
+        //    check the number of char
+        // if < 5
+        // display error and return
+        var len = search.value.length;
+        if (len < 5) {
+          message.innerHTML = "Length should be greater than 5";
+          return;
+        }
+        message.innerHTML = "";
+        // // check if enter key
+        // // true:submit
+      });
+    //   const submit = document.querySelector("#submit");
+    //   submit.addEventListener("click", function clicked(event){
+    //       if(keyup(false)){
+    //         event.preventDefault();
+    //       }
+    //       action.html();
+
+    //   });
+    </script>
+  </body>
+</html>
